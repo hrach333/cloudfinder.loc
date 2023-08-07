@@ -1,0 +1,23 @@
+{
+    "name": "hrach/cloudfinder",
+    "require-dev": {
+        "arhitector/yandex": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hrach\\Cloudfinder\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hrach333",
+            "email": "hrach@hrach.ru"
+        }
+    ],
+    "require": {},
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
