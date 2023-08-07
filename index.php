@@ -19,7 +19,6 @@ require './vendor/autoload.php';
 
 <body>
     <div>
-        Главная страница.
         
         <a href="https://oauth.yandex.ru/authorize?response_type=code&client_id=75f20864d6ac448eb95c165d8974fc62&redirect_uri=https://cloudfinder.loc/?request=true&force_confirm=yes">Войти</a>
     </div>
