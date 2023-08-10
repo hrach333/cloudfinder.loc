@@ -5,7 +5,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Hrach\\Cloudfinder\\": "app/"
+            "Hrach\\Cloudfinder\\": "src/"
         }
     },
     "authors": [
@@ -14,7 +14,13 @@
             "email": "hrach@hrach.ru"
         }
     ],
-    "require": {},
+    "require": {
+        "php-http/message-factory": "*",
+        "laminas/laminas-diactoros": "^2.17",
+        "arhitector/yandex-disk-flysystem": "dev-master",
+        "symfony/routing": "^5.4",
+        "symfony/http-foundation": "^5.4"
+    },
     "config": {
         "allow-plugins": {
             "php-http/discovery": true
