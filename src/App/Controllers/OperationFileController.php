@@ -6,7 +6,32 @@ use Symfony\Component\Routing\RouteCollection;
 
 class OperationFileController
 {
-    public function uploadAction(RouteCollection $routes)
+    public function  uploadAction(RouteCollection $routes)
+    {
+
+        $uploaddir = './uploads/';
+        if (is_dir($uploaddir))
+        {
+            echo "Это папка";
+        }
+        $uploadfile = $uploaddir . basename($_FILES['file']['name']);
+
+        echo '<pre>';
+        if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
+            echo "Файл корректен и был успешно загружен.\n";
+        } else {
+            echo "Возможная атака с помощью файловой загрузки!\n";
+        }
+
+        echo 'Некоторая отладочная информация:';
+        print_r($_FILES);
+
+        print "</pre>";
+
+
+    }
+    //временно не рабочая
+    public function upload(RouteCollection $routes)
     {
         $input_name = 'file';
 
@@ -19,12 +44,12 @@ class OperationFileController
         );
 
         // Директория куда будут загружаться файлы.
-       echo $path = __DIR__ . '/uploads/';
+       $path = '/uploads/';
 
         $data = array();
 
         if (!isset($_FILES[$input_name])) {
-            $error = 'Файлы не загружены.';
+           $error = 'Файлы не загружены.';
         } else {
             // Преобразуем массив $_FILES в удобный вид для перебора в foreach.
             $files = array();
@@ -80,11 +105,11 @@ class OperationFileController
             }
         }
 
-        /*
+
 // Вывод сообщений о результате загрузки.
         header('Content-Type: application/json');
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         exit();
-        */
+
     }
 }
