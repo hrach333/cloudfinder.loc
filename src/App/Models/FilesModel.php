@@ -10,7 +10,7 @@ class FilesModel
 {
     public function getAllFiles()
     {
-        $client = new Disk('y0_AgAAAAAFDlKtAApP-QAAAADpzsWT1hnBThQlSVS2lZvo-SSBpg3iYh8');
+        $client = new Disk(OAUTH);
         $adapter = new Flysystem($client);
         // create Filesystem
         $filesystem = new Filesystem($adapter);
