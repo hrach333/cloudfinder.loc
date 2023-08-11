@@ -5,11 +5,8 @@ use Hrach\Cloudfinder\App\Models\FilesModel;
 use Symfony\Component\Routing\RouteCollection;
 class MainController extends Controller
 {
-    private $disk;
-    public function __construct()
-    {
-        $disk = 'y0_AgAAAAAFDlKtAApP-QAAAADpzsWT1hnBThQlSVS2lZvo-SSBpg3iYh8';
-    }
+
+
 
     public function indexAction(RouteCollection $routes)
     {
