@@ -1,4 +1,3 @@
 /composer.lock
 /vendor
-/src/config
 /config/yandex_disk.php
