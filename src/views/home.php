@@ -6,9 +6,9 @@ require 'templates/head.php';
 <form enctype="multipart/form-data" action="/upload" method="POST">
 
     <input type="hidden" name="MAX_FILE_SIZE" value="10000" />
-
     Отправить этот файл: <input name="file" type="file" />
     <input type="submit" value="Отправить файл" />
+
 </form>
 
 <div id="result">
@@ -34,6 +34,7 @@ require 'templates/head.php';
         </tr>
     <?php endforeach; ?>
 </table>
+<!--Это тестовый вариант отправка через ajax с использование jqery-->
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script>
     $("#js-file").change(function () {

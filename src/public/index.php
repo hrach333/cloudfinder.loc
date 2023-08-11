@@ -7,7 +7,7 @@ session_start();
 require_once '../../vendor/autoload.php';
 
 // Загрузка конфигурации
-require_once '../config/main_config.php';
+require_once '../config/config.php';
 require '../config/yandex_disk.php';
 
 
